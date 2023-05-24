@@ -47,7 +47,7 @@ copy2win-patch :
 lint : yaml-lint
 
 yaml-lint :
-	echo "TODO"
+    yamllint ./alacritty.yml
 
 fmt : format
 

@@ -51,7 +51,7 @@ lint : yaml-lint
 
 .PHONY : yaml-lint
 yaml-lint :
-	echo "TODO"
+	yamllint ./alacritty.yml
 
 .PHONY : fmt
 fmt : format
