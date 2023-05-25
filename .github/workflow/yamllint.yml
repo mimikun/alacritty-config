@@ -1,0 +1,25 @@
+name: Run Yamllint
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - '**.yml'
+  pull_request:
+    paths:
+      - '**.yml'
+
+jobs:
+  lint:
+    name: Run Yamllint
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout Actions Repository
+          uses: actions/checkout@v3
+
+        - name: YAML Lint
+          uses: ibiqlik/action-yamllint@v3.1.1
+          with:
+            config_file: .yamllint.yml
+            file_or_dir: alacritty.yml
